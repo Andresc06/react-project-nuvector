@@ -239,20 +239,23 @@ const Chart = () => {
     <div>
       <ToastContainer />
       <h1 className="text-center fs-3">Data Projects Hours</h1>
-      <Bar data={data} height={90} options={options} />
+      <Bar data={data} height={80} options={options} />
       <form onSubmit={handleSubmit}>
+        <label className="m-1 ms-4 text-center w-50" for="start">Start Date</label>
         <input
           type="date"
           name="start"
-          className="text-center form-control my-3 w-50 mx-auto"
+          className="text-center form-control w-50 mx-auto"
           onChange={handleChange}
         />
+        <label className="m-2 ms-4 text-center w-50" for="start">End Date</label>
         <input
           type="date"
           name="end"
-          className="text-center form-control my-3 w-50 mx-auto"
+          className="text-center form-control w-50 mx-auto"
           onChange={handleChange}
         />
+        <label className="m-2 ms-4 text-center w-50" for="start">Client</label>
         <select
           className="form-control w-50 mx-auto text-center"
           id="options"
@@ -261,7 +264,7 @@ const Chart = () => {
         >
           <option value="">DEFAULT</option>
         </select>
-        <button className="btn btn-info my-3 w-50 mx-auto d-grid">
+        <button className="btn btn-info mt-3 w-50 mx-auto d-grid">
           FILTER
         </button>
       </form>
